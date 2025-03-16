@@ -3,10 +3,10 @@ name: Build APK On Mac Final
 on:
   push:
     branches:
-      - final
+      - final-alpha
   pull_request:
     branches:
-      - final
+      - final-alpha
   workflow_dispatch:
 
 jobs:
