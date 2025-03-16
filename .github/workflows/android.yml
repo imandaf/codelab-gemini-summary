@@ -17,8 +17,11 @@ jobs:
       - name: Check Windows System Information
         run: systeminfo
 
-      - name: Check Windows Version
-        run: ver
+      - name: Get General System Information
+        run: Get-ComputerInfo
+
+      - name: Get OS Details
+        run: Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber, OSArchitecture
     
       - name: Checkout code
         uses: actions/checkout@v2
