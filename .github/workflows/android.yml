@@ -3,22 +3,22 @@ name: Build APK
 on:
   push:
     branches:
-      - main
+      - main-beta
   pull_request:
     branches:
-      - main
+      - main-beta
   workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: windows-2019
 
     steps:
-      - name: Check Mac Specification
-        run: system_profiler SPHardwareDataType
+      - name: Check Windows System Information
+        run: systeminfo
 
-      - name: Check Mac System Software
-        run: system_profiler SPSoftwareDataType
+      - name: Check Windows Version
+        run: ver
     
       - name: Checkout code
         uses: actions/checkout@v2
