@@ -8,12 +8,6 @@ jobs:
     runs-on: macos-15
 
     steps:
-      - name: Check Mac Specification
-        run: system_profiler SPHardwareDataType
-
-      - name: Check Mac System Software
-        run: system_profiler SPSoftwareDataType
-    
       - name: Checkout code
         uses: actions/checkout@v4
 
