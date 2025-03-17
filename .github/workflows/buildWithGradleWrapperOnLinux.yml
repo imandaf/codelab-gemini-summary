@@ -8,11 +8,17 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Check Mac Specification
-        run: system_profiler SPHardwareDataType
+      - name: Displays kernel version, hostname, and system architecture.
+        run: uname -a
 
-      - name: Check Mac System Software
-        run: system_profiler SPSoftwareDataType
+      - name: Detailed CPU architecture info
+        run: lscpu
+
+      - name: Shows Linux distribution details
+        run: lsb_release -a
+
+      - name: Shows Linux distribution details 2
+        run: cat /etc/os-release
     
       - name: Checkout code
         uses: actions/checkout@v4
