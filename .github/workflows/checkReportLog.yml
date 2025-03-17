@@ -1,0 +1,12 @@
+name: Check Report Log
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-13
+
+    steps:
+      - name: Check Log
+        run: cat /Users/runner/work/codelab-gemini-summary/codelab-gemini-summary/app/build/reports/tests/testReleaseUnitTest/index.html
